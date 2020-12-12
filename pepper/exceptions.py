@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
+"""Custom pepper exceptions."""
 
 
 class PepperAuthException(Exception):
-    pass
+    """Custom pepper auth exception."""
 
 
 class PepperArgumentsException(Exception):
-    pass
+    """Custom pepper argument exception."""
 
 
 class PepperException(Exception):
-    pass
+    """Custom pepper exception."""

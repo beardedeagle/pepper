@@ -7,3 +7,6 @@ MANIFEST
 dist/
 salt_pepper.egg-info/
 .tox/
+
+.mypy_cache
+.vscode

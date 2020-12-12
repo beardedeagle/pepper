@@ -1,5 +1,5 @@
-PYVERSION?=py37
-SALT?=v2019.2
+PYVERSION?=py38
+SALT?=v3002.2
 BACKEND?=cherrypy
 DEBIAN_FRONTEND=noninteractive
 

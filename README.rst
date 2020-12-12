@@ -26,9 +26,7 @@ daemons as though they were running Salt locally. The long-term goal is to add
 additional CLI scripts maintain the same interface as Salt's own CLI scripts
 (``salt``, ``salt-run``, ``salt-key``, etc).
 
-It does not require any additional dependencies and runs on Python 2.5+ and
-Python 3. (Python 3 support is new, please file an issue if you encounter
-trouble.)
+It does not require any additional dependencies and runs on Python 3.6+.
 
 .. __: https://github.com/saltstack/salt-api
 
@@ -46,29 +44,29 @@ Basic usage is in heavy flux. You can run pepper using the script in %PYTHONHOME
 .. code-block:: bash
 
     export SALTAPI_USER=saltdev SALTAPI_PASS=saltdev SALTAPI_EAUTH=pam
-    pepper '*' test.ping
-    pepper '*' test.kwarg hello=dolly
+    pepper "*" test.ping
+    pepper "*" test.kwarg hello=dolly
 
 Examples leveraging the runner client.
 
 .. code-block:: bash
 
     pepper --client runner reactor.list
-    pepper --client runner reactor.add event='test/provision/*' reactors='/srv/salt/state/reactor/test-provision.sls'
+    pepper --client runner reactor.add event="test/provision/*" reactors="/srv/salt/state/reactor/test-provision.sls"
 
 Configuration
 -------------
 
-You can configure pepper through the command line, using environment variables 
-or in a configuration file ``$HOME/.pepperrc`` with the following syntax : 
+You can configure pepper through the command line, using environment variables
+or in a configuration file ``$HOME/.pepperrc`` with the following syntax :
 
-.. code-block:: 
+.. code-block::
 
-  [main]
-  SALTAPI_URL=https://localhost:8000/
-  SALTAPI_USER=saltdev
-  SALTAPI_PASS=saltdev
-  SALTAPI_EAUTH=pam
+    [main]
+    SALTAPI_URL=https://localhost:8000/
+    SALTAPI_USER=saltdev
+    SALTAPI_PASS=saltdev
+    SALTAPI_EAUTH=pam
 
 Contributing
 ------------
